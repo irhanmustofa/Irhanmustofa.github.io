@@ -101,7 +101,6 @@ body.boxed {
 }
 body.de_light {
 	color: #555;
-
 }
 #wrapper {
 	overflow: hidden;
@@ -670,27 +669,6 @@ header.header-mobile.header-light #menu-btn {
 	background: #18191b;
 }
 
-.social-links a {
-	font-size: 18px;
-	display: inline-block;
-	background: #212431;
-	color: #fff;
-	line-height: 1;
-	padding: 8px 0;
-	margin-right: 4px;
-	border-radius: 50%;
-	text-align: center;
-	width: 36px;
-	height: 36px;
-	transition: 0.3s;
-  }
-  
- .social-links a:hover {
-	background: #149ddd;
-	color: #fff;
-	text-decoration: none;
-  }
-
 /* ================================================== */
 
 
@@ -700,7 +678,7 @@ header.header-mobile.header-light #menu-btn {
 /* ================================================== */
 
 section {
-	/* padding: 100px 0 100px 0; */
+	padding: 100px 0 100px 0;
 	overflow: hidden;
 	position: relative;
 }
@@ -718,7 +696,6 @@ section.no-bg, #content.no-bg{
 }
 .de_light section {
 	background: #ffffff;
-	height: 800px;
 }
 .section-fixed {
 	position: fixed;
@@ -2648,9 +2625,9 @@ span.teaser {
 	border-color: #333 transparent;
 }
 .exp-box{
-	/* border-bottom:solid 1px rgba(255,255,255,.1); */
-	/* margin-bottom:30px;
-	padding-bottom:10px; */
+	border-bottom:solid 1px rgba(255,255,255,.1);
+	margin-bottom:30px;
+	padding-bottom:10px;
 }
 .exp-box.s1{
 	border-bottom:solid 1px #aaa;
@@ -4184,7 +4161,7 @@ a.btn-left, a.btn-right {
 }
 
 .padding20 {
-	padding: 10px;
+	padding: 20px;
 }
 .padding30 {
 	padding: 30px;
@@ -5936,7 +5913,7 @@ p.intro {
 	z-index: 100;
 	background: rgba(20, 20, 20, .6);
 	top: 0;
-	padding:20px 0 100px 0;
+	padding:100px 0 100px 0;
 }
 .overlay-gradient {
 	width: 100%;
@@ -7473,16 +7450,12 @@ a, img {
 	}
 	.container .col-md-4 {
 		margin-bottom: 30px;
-		margin-right: 70px;
 	}
 	.container .col-md-5 {
 		margin-bottom: 30px;
 	}
 	.container .col-md-6 {
 		margin-bottom: 30px;
-		/* margin-right: 50%;
-		margin-left: 50%; */
-		
 	}
 	.container .col-md-7 {
 		margin-bottom: 30px;
@@ -7567,7 +7540,7 @@ a, img {
 	}
 	.container {
 		padding-left: 30px;
-		/* padding-right: 30px; */
+		padding-right: 30px;
 	}
 	.feature-box-image, .pricing-box {
 		margin-bottom: 30px;
