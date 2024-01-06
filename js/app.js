@@ -1,133 +1,76 @@
-/* -----------------------------------------------
-/* How to use? : Check the GitHub README
-/* ----------------------------------------------- */
-
-/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
-/*
-particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.js loaded - callback');
-});
+/* Template Name: Cristino - Responsive Personal Template
+   Author: Shreethemes
+   Email: shreethemes@gmail.com
+   Website: http://www.shreethemes.in
+   Version: 1.9.0
+   Created: May 2020
+   File Description: Main JS file of the template
 */
 
-/* Otherwise just put the config content (json): */
+/************************/
+/*       INDEX          */
+/*=======================
+ *  01.  Loader         *
+ *  02.  Menu           *
+ *  03.  Scrollspy      *
+ *  04.  Magnific Popup *
+ *  05.  Owl Carousel   *
+ *  06.  Back to top    *
+ *  07.  Feather Icon   *
+ =======================*/
 
-particlesJS('particles-js',
-  
-  {
-    "particles": {
-      "number": {
-        "value": 60,
-        "density": {
-          "enable": true,
-          "value_area": 800
-        }
-      },
-      "color": {
-        "value": "#ffffff"
-      },
-      "shape": {
-        "type": "circle",
-        "stroke": {
-          "width": 0,
-          "color": "#000000"
-        },
-        "polygon": {
-          "nb_sides": 5
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 0.5,
-        "random": false,
-        "anim": {
-          "enable": false,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 5,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 150,
-        "color": "#ffffff",
-        "opacity": 0.4,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 6,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 400,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 40,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 200
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#b61924",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
+// Preloader
+window.onload = function loader() { 
+    setTimeout(() => {
+        document.getElementById('preloader').style.visibility = 'hidden';
+        document.getElementById('preloader').style.opacity = '0';
+    }, 350);
+} 
+
+
+// Menu sticky
+function windowScroll() {
+    const navbar = document.getElementById("navbar");
+    if (
+        document.body.scrollTop >= 50 ||
+        document.documentElement.scrollTop >= 50
+    ) {
+        navbar.classList.add("nav-sticky");
+    } else {
+        navbar.classList.remove("nav-sticky");
     }
-  }
+}
 
-);
+window.addEventListener('scroll', (ev) => {
+    ev.preventDefault();
+    windowScroll();
+})
+
+// back-to-top
+var mybutton = document.getElementById("back-to-top");
+window.onscroll = function () {
+    scrollFunction();
+};
+function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        console.log(document.body.scrollTop);
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+//Feather icon
+feather.replace()
+
+// Navbar Active Class
+var spy = new Gumshoe('#navbar-navlist a', {
+    // Active classes
+    // navClass: 'active', // applied to the nav list item
+    // contentClass: 'active', // applied to the content
+    offset: 80
+});
